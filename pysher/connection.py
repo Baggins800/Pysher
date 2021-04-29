@@ -9,7 +9,7 @@ import json
 
 class Connection(Thread):
     def __init__(self, event_handler, url, reconnect_handler=None, log_level=None,
-                 daemon=True, reconnect_interval=10, socket_kwargs=None, **thread_kwargs):
+                 daemon=True, reconnect_interval=10, ping_interval=120, socket_kwargs=None, **thread_kwargs):
         self.event_handler = event_handler
         self.url = url
 
@@ -57,7 +57,7 @@ class Connection(Thread):
         self.connection_timeout = 305
         self.connection_timer = None
 
-        self.ping_interval = 120
+        self.ping_interval = ping_interval
         self.ping_timer = None
 
         self.timeout_scheduler = sched.scheduler(
