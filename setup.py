@@ -1,6 +1,6 @@
 from setuptools import setup
 
-VERSION = "1.0.6"
+VERSION = "1.0.7"
 
 requirements = ["websocket-client!=0.49"]
 
@@ -10,18 +10,18 @@ def readme():
         return f.read()
 
 setup(
-    name="Pysher",
+    name="pysher-elytica",
     version=VERSION,
-    description="Pusher websocket client for python, based on Erik Kulyk's PythonPusherClient",
+    description="Pusher websocket client for python, based on Erik Kulyk's PythonPusherClient and Nils Diefenbach Pysher. This package has some fixes to support laravel-websockets(beyondcode) support.",
     long_description=readme(),
     long_description_content_type='text/markdown',
     keywords="pusher websocket client",
-    author="Nils Diefenbach",
-    author_email="nlsdfnbch.foss@kolabnow.com",
+    author="Ruan Luies",
+    author_email="ruan@elytica.com",
     license="MIT",
-    url="https://github.com/nlsdfnbch/Pysher",
+    url="https://github.com/baggins800/Pysher",
     install_requires=requirements,
-    packages=["pysher"],
+    packages=["pysher-elytica"],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
