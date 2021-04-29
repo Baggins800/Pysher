@@ -10,7 +10,7 @@ def readme():
         return f.read()
 
 setup(
-    name="pysher-elytica",
+    name="elytica-pysher",
     version=VERSION,
     description="Pusher websocket client for python, based on Erik Kulyk's PythonPusherClient and Nils Diefenbach Pysher. This package has some fixes to support laravel-websockets(beyondcode) support.",
     long_description=readme(),
@@ -21,7 +21,7 @@ setup(
     license="MIT",
     url="https://github.com/baggins800/Pysher",
     install_requires=requirements,
-    packages=["pysher-elytica"],
+    packages=["pysher"],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
